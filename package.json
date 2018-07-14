@@ -4,7 +4,18 @@
   "description": "resource dependencies for FD code kata",
   "main": "",
   "scripts": {
-    "test": "jest"
+    "clean": "rm -rf lib",
+    "build": "npm run clean && ./node_modules/.bin/babel src --out-dir lib",
+    "test": "jest --verbose --colors"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js?$": "babel-jest"
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ]
   },
   "repository": {
     "type": "git",
@@ -13,6 +24,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.4.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
     "jest": "^23.4.1"
-  }
+  },
+  "dependencies": {}
 }
