@@ -11,7 +11,7 @@ class baseMap{
 
         Object.keys(record).forEach((key) => {
             if(this.propertiesList.includes(key) && !!record[key])
-                this[key] = key;
+                this[key] = record[key];
         });
     }
 }

@@ -19,9 +19,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git status"
+    "url": "https://github.com/bretphillips/project-react-node-resources"
   },
-  "author": "",
+  "author": "bphillips",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.26.0",

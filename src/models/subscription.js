@@ -25,8 +25,10 @@ class Subscription extends baseMap{
     }
 
     mapToModels(){
-        const mapCustomer = new Customer(Customer.propertiesList).mapFromService(this.customer);
-        const mapVehicle = new Vehicle(Vehicle.propertiesList).mapFromService(this.vehicle);
+        const mapCustomer = new Customer(Customer.propertiesList)
+        mapCustomer.mapFromService(this.customer);
+        const mapVehicle = new Vehicle(Vehicle.propertiesList)
+        mapVehicle.mapFromService(this.vehicle);
         const mapSubscriptionLength = new SubsciptionLength(this.subscriptionLength.length);
 
         this.customer = mapCustomer;
