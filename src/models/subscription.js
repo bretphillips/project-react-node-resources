@@ -19,8 +19,8 @@ class Subscription extends baseMap{
      * convert object literals to class instances to enforce compositional
      * model use where referenced
      */
-    mapFromService(){
-        super.mapFromService(Subscription.propertiesList);
+    mapFromService(record){
+        super.mapFromService(record);
         this.mapToModels();
     }
 
